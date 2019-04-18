@@ -1,0 +1,51 @@
+<?php 
+function regpanel_menu() {
+
+$items = array();
+
+$items['regpanel'] = array(
+'title' => 'Reg Panel',
+'description' => 'A registration panel',
+'page callback' => 'drupal_get_form',
+'page arguments' => array('regpanel_form'),
+'access callback' => TRUE
+
+);
+
+return $items;
+
+}
+
+function regpanel_form($form, &$form_state) {
+
+$form['login'] = array(
+'#type' => 'item',
+'#title' => t(''),
+'#markup' => '<div>Login</div>'
+);
+
+$form['register'] = array(
+'#type' => 'item',
+'#title' => t(''),
+'#markup' => '<div>Register</div>'
+);
+
+$form['tellmemore'] = array(
+'#type' => 'item',
+'#title' => t(''),
+'#markup' => '<div>Tell me more</div>'
+);
+
+$form['help'] = array(
+'#type' => 'item',
+'#title' => t(''),
+'#markup' => '<div>Help using the site</div>'
+);
+
+return $form;
+
+}
+	
+	
+
+
