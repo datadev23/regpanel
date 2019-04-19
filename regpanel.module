@@ -21,7 +21,8 @@ function regpanel_form($form, &$form_state) {
 $form['login'] = array(
 '#type' => 'item',
 '#title' => t(''),
-'#markup' => '<div>Login</div>'
+'#markup' => '<span id="text">Login In</span>
+            <span id="key"><i class="fas fa-key"></i></span>'
 );
 
 $form['register'] = array(
@@ -45,6 +46,21 @@ $form['help'] = array(
 return $form;
 
 }
+
+function regpanel_theme($existing, $type, $theme, $path) {
+
+    $items['regpanel_form'] = array(
+    'render element' => 'form',
+    'template' => 'regpanel',
+    'path' => drupal_get_path("module", "regpanel"). '/template/form',
+
+    );
+
+    return $items;
+
+
+}
+
 	
 	
 

@@ -2,3 +2,5 @@ name = Reg Panel
 description = registration panel
 core = 7.x
 package = Panel
+; Add a style sheet for all media
+stylesheets[all][] =  regstyle.css
